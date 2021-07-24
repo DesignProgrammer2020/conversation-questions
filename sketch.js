@@ -12,23 +12,22 @@ function setup() {
   // addMoreButton = select("#addMoreButton");
   // addMoreButton.mousePressed(addInput);
 
-  for (let i = 0; i < 3; i++) {
-    // nameInputs.push(createInput());
-    // nameInputs[i].parent("#inputFields");
-  }
-
+  // for (let i = 0; i < 3; i++) {
+  //   // nameInputs.push(createInput());
+  //   // nameInputs[i].parent("#inputFields");
+  // }
 }
 
-function draw() {
+// function draw() {
   //text style for entire composition
-  textSize(28);
+  // textSize(28);
 
-  push();
+  // push();
   //beginning scene with fishes in water
-  if (firstTime) {
-    textSize(28);
-  }
-  pop();
+  // if (firstTime) {
+  //   textSize(28);
+  // }
+  // pop();
 
   //start animating after user presses randomizer button
   // if (animating == true) {
