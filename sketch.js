@@ -34,8 +34,8 @@ function draw() {
   textSize(28);
 
   // push();
-  if (firstTime) {
-  }
+  // if (firstTime) {
+  // }
   // pop();
 
   // start animating after user presses randomizer button
