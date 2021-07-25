@@ -13,39 +13,36 @@ function draw() {
   // pop();
 
   // start animating after user presses randomizer button
-  // if (animating == true) {
-  //   clear();
+  if (animating == true) {
+    clear();
 
-    //dark green background
+    // dark green background
     background(80, 180, 80);
-  // }
+  }
 
-  //start animating end scene with birds flying after all animals are displayed
-  // if (final) {
-  //   //medium/light colored bkg to contrast with black text
-  //   background(random(100, 255), random(100, 255), random(100, 255));
-  //   textSize(28);
-  //   //black text
-  //   fill(0);
-  //   text("Don't litter!", width * 0.25, height * 0.5);
-  //   text("Protect the animals.", width * 0.25, height * 0.6);
-  // }
+  if (final) {
+    background(random(100, 255), random(100, 255), random(100, 255));
+    textSize(28);
+    //black text
+    fill(0);
+    text("", width * 0.25, height * 0.5);
+    text("", width * 0.25, height * 0.6);
+  }
 }
 
-// function randomizer() {
-//
+function randomizer() {
+
 //   animating = false;
-//
+
 //   //for randomizing items from blanks and images
 //   // if (animals[0]) {
-//   //
+
 //   //   clear();
-//   //
+
 //   //   //dark blue background
 //   //   background(0, 0, 180);
 //   //   randomIndexPlastics = int(random(plastics.length));
-//   //
-//   //
+
 //   //   //random visible colors for the display text
 //   //   fill(random(100, 240), random(100, 180), random(100, 240));
 //   //   //add items from blanks to sentence
@@ -55,7 +52,7 @@ function draw() {
 //     //end scene
 //     final = true;
 //   }
-// }
+}
 
 // //call back function for randomizer after button pressed
 // function buttonPressed() {
