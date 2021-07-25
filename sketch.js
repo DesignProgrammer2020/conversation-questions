@@ -1,53 +1,24 @@
 function setup() {
-
   background(0, 140, 255);
-
   createCanvas(800, 600);
-
-  //click the button
-  // buttonRandomizer = select("#randButton");
-  // buttonRandomizer.mousePressed(buttonPressed);
-
-  //"add more animals"
-  // addMoreButton = select("#addMoreButton");
-  // addMoreButton.mousePressed(addInput);
-
-  // for (let i = 0; i < 3; i++) {
-  //   // nameInputs.push(createInput());
-  //   // nameInputs[i].parent("#inputFields");
-  // }
 }
 
-// function draw() {
-  //text style for entire composition
+function draw() {
+  // text style for entire composition
   // textSize(28);
 
   // push();
-  //beginning scene with fishes in water
   // if (firstTime) {
-  //   textSize(28);
   // }
   // pop();
 
-  //start animating after user presses randomizer button
+  // start animating after user presses randomizer button
   // if (animating == true) {
   //   clear();
-  //
-  //   //dark blue background
-  //   background(80, 180, 80);
-  //
-  //   //images of plastics
-  //
-  //
-  //   // imageCounter %= plastics.length;
-  //   //
-  //   // image(plastics[imageCounter], width / 2, height / 2);
-  //   // if (imageCounter < plastics.length - 1) {
-  //   //   imageCounter++;
-  //   // } else {
-  //   //   imageCounter = 0;
-  //   // }
-  // }
+
+    //dark blue background
+    background(80, 180, 80);
+  }
 
   //start animating end scene with birds flying after all animals are displayed
   // if (final) {
