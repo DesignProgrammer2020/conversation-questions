@@ -34,18 +34,16 @@ function randomizer() {
 
 //   animating = false;
 
-//   //for randomizing items from blanks and images
-//   // if (animals[0]) {
+//   //for randomizing questions
+//   // if (ABC[0]) {
 
 //   //   clear();
 
 //   //   //dark blue background
 //   //   background(0, 0, 180);
-//   //   randomIndexPlastics = int(random(plastics.length));
 
 //   //   //random visible colors for the display text
 //   //   fill(random(100, 240), random(100, 180), random(100, 240));
-//   //   //add items from blanks to sentence
 //   //   text(`ABC`, width * 0.15, height * 0.82);
 //   //
 //   // } else {
