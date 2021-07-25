@@ -46,14 +46,14 @@ function draw() {
     background(80, 180, 80);
   // }
 
-  if (final) {
-    background(random(100, 255), random(100, 255), random(100, 255));
-    // textSize(28);
-    // //black text
-    // fill(0);
-    // text("", width * 0.25, height * 0.5);
-    // text("", width * 0.25, height * 0.6);
-  }
+  // if (final) {
+  //   background(random(100, 255), random(100, 255), random(100, 255));
+  //   // textSize(28);
+  //   // //black text
+  //   // fill(0);
+  //   // text("", width * 0.25, height * 0.5);
+  //   // text("", width * 0.25, height * 0.6);
+  // }
 }
 
 // function randomizer() {
