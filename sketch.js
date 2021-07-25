@@ -1,7 +1,6 @@
 function setup() {
   // background(0, 140, 255);
   createCanvas(800, 600);
-  background(0, 140, 255);
 }
 
 function draw() {
@@ -17,9 +16,9 @@ function draw() {
   // if (animating == true) {
   //   clear();
 
-    //dark blue background
+    //dark green background
     background(80, 180, 80);
-  }
+  // }
 
   //start animating end scene with birds flying after all animals are displayed
   // if (final) {
@@ -31,7 +30,7 @@ function draw() {
   //   text("Don't litter!", width * 0.25, height * 0.5);
   //   text("Protect the animals.", width * 0.25, height * 0.6);
   // }
-// }
+}
 
 // function randomizer() {
 //
