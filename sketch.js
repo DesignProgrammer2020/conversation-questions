@@ -20,7 +20,6 @@
 // What are your favorite colors and why?
 
 
-
 function setup() {
   // background(0, 140, 255);
   createCanvas(800, 600);
