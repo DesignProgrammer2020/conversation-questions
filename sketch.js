@@ -80,9 +80,7 @@ function randomizer() {
 //
 //   //beginning scene
 //   if (firstTime) {
-//     for (let i = 0; i < nameInputs.length; i++) {
-//       animals.push(nameInputs[i].value());
-//     }
+//
 //   //others
 //     firstTime = false;
 //   }
