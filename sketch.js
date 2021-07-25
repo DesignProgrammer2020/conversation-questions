@@ -33,17 +33,33 @@ function draw() {
   // text style for entire composition
   textSize(28);
 
-  // push();
-  // if (firstTime) {
+  //  switch (state) {
+  //  case 'title':
+  //    drawWelcomePage();
+  //    title();
+  //    cnv.mouseClicked(titleMouseClicked);
+  //    break;
+  //
+  //  case 'level 1':
+  //    level1();
+  //    cnv.mouseClicked(level1MouseClicked);
+  //    break;
+  //
+  //  case 'you win':
+  //    youWin();
+  //    cnv.mouseClicked(youWinMouseClicked);
+  //    break;
+  //
+  //  case 'draw':
+  //    drawDraw();
+  //    break;
+  //
+  //  default:
+  //    break;
   // }
-  // pop();
-
-  // start animating after user presses randomizer button
-  // if (animating == true) {
-  //   clear();
 
     // dark green background
-    background(80, 180, 80);
+    // background(80, 180, 80);
   // }
 
   // if (final) {
