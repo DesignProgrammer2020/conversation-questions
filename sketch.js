@@ -3,7 +3,7 @@ questions = ["What is your favorite drink?";
 "What is your favorite dessert?";
 "What is your favorite restaurant?";
 "What is your favorite sports team/athlete?";
-"What kinds of sports/physical activities do you practie?";
+"What kinds of sports/physical activities do you practice?";
 "What is your favorite season?";
 "What kinds of weather do you like?";
 "How is the weather in your area?";
@@ -70,7 +70,7 @@ function draw() {
 
 //   //   //random visible colors for the display text
 //   //   fill(random(100, 240), random(100, 180), random(100, 240));
-//   //   text(`${question}`, width * 0.5, height * 0.5);
+//   //   text(`${questions}`, width * 0.5, height * 0.5);
 //   //
 //   // } else {
 //     //end scene
