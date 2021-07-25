@@ -56,7 +56,7 @@ function draw() {
   }
 }
 
-function randomizer() {
+// function randomizer() {
 
 //   animating = false;
 
@@ -70,13 +70,13 @@ function randomizer() {
 
 //   //   //random visible colors for the display text
 //   //   fill(random(100, 240), random(100, 180), random(100, 240));
-//   //   text(`ABC`, width * 0.15, height * 0.82);
+//   //   text(`${question}`, width * 0.5, height * 0.5);
 //   //
 //   // } else {
 //     //end scene
 //     final = true;
 //   }
-}
+// }
 
 // //call back function for randomizer after button pressed
 // function buttonPressed() {
