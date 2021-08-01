@@ -21,7 +21,7 @@ let questions = ["What is your favorite drink?",
 "What are your favorite stores of any kind?",
 "What is/was your favorite toy?",
 "What are your hobbies?",
-"What are your favorite colors and why?"];
+"What are your favorite colors?"];
 
 
 function setup() {
