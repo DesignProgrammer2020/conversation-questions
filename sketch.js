@@ -27,6 +27,7 @@ let questions = ["What is your favorite drink?",
 function setup() {
   // background(0, 140, 255);
   createCanvas(800, 600);
+  pixelDensity(1);
 }
 
 function draw() {
@@ -59,7 +60,10 @@ function draw() {
   // }
 
     // dark green background
-    background(80, 180, 80);
+    // background(80, 180, 80);
+
+    //background with multiple cool colors
+    drawPixels();
   // }
 
   // if (final) {
@@ -102,3 +106,18 @@ function draw() {
 //   animating = true;
 //   setTimeout(randomizer, 1000);
 // }
+
+function drawPixels() {
+  //draw background with pixels
+  loadPixels();
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      let index = (i + j * width) * 4;
+      pixels[index + 0] = i / 4;
+      pixels[index + 1] = j / 2;
+      pixels[index + 2] = i / 2;
+      pixels[index + 3] = 255;
+    }
+  }
+  updatePixels();
+}
