@@ -59,7 +59,7 @@ function draw() {
   // }
 
     // dark green background
-    // background(80, 180, 80);
+    background(80, 180, 80);
   // }
 
   // if (final) {
