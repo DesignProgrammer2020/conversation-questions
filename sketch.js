@@ -36,14 +36,15 @@ function draw() {
 
    // switch (state) {
    // case 'title':
-     drawTitle();
+     title();
+     // cnv.mouseClicked(titleMouseClicked);
      // break;
-  //
-  //  case 'level 1':
-  //    level1();
-  //    cnv.mouseClicked(level1MouseClicked);
-  //    break;
-  //
+
+   // case 'shuffle':
+   //   shuffle();
+   //   cnv.mouseClicked(level1MouseClicked);
+   //   break;
+
   //  case 'you win':
   //    youWin();
   //    cnv.mouseClicked(youWinMouseClicked);
@@ -72,23 +73,6 @@ function draw() {
   //   // text("", width * 0.25, height * 0.5);
   //   // text("", width * 0.25, height * 0.6);
   // }
-}
-
-// function randomizer() {
-// animating = false;
-// //for randomizing questions
-// if (questions[0]) {
-//   clear();
-//   // //dark blue background
-//   // background(0, 0, 180);
-//
-// //   //   //random visible colors for the display text
-// //   //   fill(random(100, 240), random(100, 180), random(100, 240));
-// text(`${questions}`, width * 0.5, height * 0.5);
-// } else {
-// //     //end scene
-// final = true;
-// }
 // }
 
 // //call back function for randomizer after button pressed
@@ -103,7 +87,7 @@ function draw() {
 
 //   animating = true;
 //   setTimeout(randomizer, 1000);
-// }
+}
 
 function drawPixels() {
   //draw background with light blue and cyan pixels to resemble ice
@@ -120,7 +104,7 @@ function drawPixels() {
   updatePixels();
 }
 
-function drawTitle() {
+function title() {
   drawPixels();
   fill(0, 40, 180); //dark blue text to put over lighter blue background
   textAlign(CENTER);
@@ -130,9 +114,27 @@ function drawTitle() {
   text("Click screen to begin", width*0.5, height*0.8);
 }
 
+// function titleMouseClicked(){
+//   state = shuffle;
+// }
 
 // function drawIceCubes(){
 //
 // }
 
-// function draw
+// function shuffle() {
+  // animating = false;
+  //for randomizing questions
+  // if (questions[0]) {
+    // clear();
+
+    // function drawPixels();
+
+    //random visible colors for the display text
+    // fill(random(100, 240), random(100, 180), random(100, 240));
+    // text(`${questions}`, width * 0.5, height * 0.5);
+    // } else {
+    //end scene
+    // final = true;
+  // }
+// }
