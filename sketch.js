@@ -26,7 +26,7 @@ let questions = ["What is your favorite drink?",
 
 function setup() {
   // background(0, 140, 255);
-  createCanvas(800, 600);
+  createCanvas(windowWidth, 600);
   pixelDensity(1);
 }
 
@@ -108,15 +108,15 @@ function draw() {
 // }
 
 function drawPixels() {
-  //draw background with pixels
+  //draw background with light blue and cyan pixels to resemble ice
   loadPixels();
-  for (let j = 0; j < height; j++) {
-    for (let i = 0; i < width; i++) {
+  for (let i = 0; i < width; i++) {
+    for (let j = 0; j < height; j++) {
       let index = (i + j * width) * 4;
-      pixels[index + 0] = i / 4;
-      pixels[index + 1] = j / 2;
-      pixels[index + 2] = i / 2;
-      pixels[index + 3] = 255;
+      pixels[index + 0] = 0; //no red used here
+      pixels[index + 1] = i*0.125;  //add some green to create cyan
+      pixels[index + 2] = j*0.75; //add blue for coolness
+      pixels[index + 3] = j*0.5; //add transparency to make colors lighter
     }
   }
   updatePixels();
