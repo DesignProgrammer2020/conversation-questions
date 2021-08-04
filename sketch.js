@@ -34,12 +34,10 @@ function draw() {
   // text style for entire composition
   textSize(28);
 
-  //  switch (state) {
-  //  case 'title':
-  //    drawWelcomePage();
-  //    title();
-  //    cnv.mouseClicked(titleMouseClicked);
-  //    break;
+   // switch (state) {
+   // case 'title':
+     drawTitle();
+     // break;
   //
   //  case 'level 1':
   //    level1();
@@ -63,7 +61,7 @@ function draw() {
     // background(80, 180, 80);
 
     //background with multiple cool colors
-    drawPixels();
+    // drawPixels();
   // }
 
   // if (final) {
@@ -121,3 +119,20 @@ function drawPixels() {
   }
   updatePixels();
 }
+
+function drawTitle() {
+  drawPixels();
+  fill(0, 40, 180); //dark blue text to put over lighter blue background
+  textAlign(CENTER);
+  textSize(96);
+  text("Ice Breaker", width*0.5, height*0.5);
+  textSize(24);
+  text("Click screen to begin", width*0.5, height*0.8);
+}
+
+
+// function drawIceCubes(){
+//
+// }
+
+// function draw
