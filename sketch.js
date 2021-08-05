@@ -1,3 +1,6 @@
+// let animating = false;
+
+//display random questions from this array
 let questions = ["What is your favorite drink?",
 "What is your favorite cuisine?",
 "What is your favorite dessert?",
@@ -23,6 +26,7 @@ let questions = ["What is your favorite drink?",
 "What are your hobbies?",
 "What are your favorite colors?"];
 
+question index = 0;
 
 function setup() {
   // background(0, 140, 255);
@@ -31,49 +35,25 @@ function setup() {
 }
 
 function draw() {
-  // text style for entire composition
-  textSize(28);
 
-   // switch (state) {
-   // case 'title':
+   switch (state) {
+   case 'title':
      title();
-     // cnv.mouseClicked(titleMouseClicked);
-     // break;
+     cnv.mouseClicked(titleMouseClicked);
+     break;
 
-   // case 'shuffle':
-   //   shuffle();
-   //   cnv.mouseClicked(level1MouseClicked);
-   //   break;
-
-  //  case 'you win':
-  //    youWin();
-  //    cnv.mouseClicked(youWinMouseClicked);
-  //    break;
-  //
-  //  case 'draw':
-  //    drawDraw();
-  //    break;
+   case 'shuffle':
+     shuffle();
+     // cnv.mouseClicked(shuffleMouseClicked);
+     break;
   //
   //  default:
   //    break;
   // }
-
-    // dark green background
-    // background(80, 180, 80);
-
-    //background with multiple cool colors
-    // drawPixels();
-  // }
-
-  // if (final) {
-  //   background(random(100, 255), random(100, 255), random(100, 255));
-  //   // textSize(28);
-  //   // //black text
-  //   // fill(0);
-  //   // text("", width * 0.25, height * 0.5);
-  //   // text("", width * 0.25, height * 0.6);
-  // }
-// }
+  //
+  //   //background with multiple cool colors
+  //   drawPixels();
+  }
 
 // //call back function for randomizer after button pressed
 // function buttonPressed() {
@@ -87,7 +67,7 @@ function draw() {
 
 //   animating = true;
 //   setTimeout(randomizer, 1000);
-}
+// }
 
 function drawPixels() {
   //draw background with light blue and cyan pixels to resemble ice
@@ -107,6 +87,7 @@ function drawPixels() {
 function title() {
   drawPixels();
   fill(0, 40, 180); //dark blue text to put over lighter blue background
+  // drawIceCubes();
   textAlign(CENTER);
   textSize(96);
   text("Ice Breaker", width*0.5, height*0.5);
@@ -122,19 +103,39 @@ function title() {
 //
 // }
 
-// function shuffle() {
+function shuffle() {
   // animating = false;
-  //for randomizing questions
-  // if (questions[0]) {
-    // clear();
+  // for shuffling questions
+  if (animating!) {
+    clear();
 
-    // function drawPixels();
+    function drawPixels();
 
-    //random visible colors for the display text
-    // fill(random(100, 240), random(100, 180), random(100, 240));
-    // text(`${questions}`, width * 0.5, height * 0.5);
-    // } else {
-    //end scene
-    // final = true;
-  // }
+    // random visible colors for the display text
+    fill(0, 40, 180); //dark blue text to put over lighter blue background
+    noStroke();
+
+    textAlign(CENTER);
+    textSize(24);
+
+    // question = random(questions);
+    // text(`${question}`, width * 0.5, height * 0.5);
+     text(questions[index], width * 0.5, height * 0.5);
+    // questions.splice(randomIndex, 1);
+    } else {
+    animating();
+    // end scene
+    state = title;
+  }
+}
+
+// function shuffleMouseClicked(){
+//   state = title;
 // }
+
+function mousePressed(){
+  index += 1;
+  if (index == questions.length) {
+    index = 0;
+  }
+}
