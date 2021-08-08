@@ -1,7 +1,7 @@
-// let animating = false;
+let animating = false;
 
 //display random questions from this array
-let questions = ["What is your favorite drink?",
+let question_library = ["What is your favorite drink?",
 "What is your favorite cuisine?",
 "What is your favorite dessert?",
 "What is your favorite restaurant?",
@@ -26,7 +26,9 @@ let questions = ["What is your favorite drink?",
 "What are your hobbies?",
 "What are your favorite colors?"];
 
-question index = 0;
+let index = -1;
+let state = 'title';
+let questions = [];
 
 function setup() {
   // background(0, 140, 255);
@@ -35,39 +37,19 @@ function setup() {
 }
 
 function draw() {
+   switch (state){
+     case 'title':
+        title();
+        break;
 
-   switch (state) {
-   case 'title':
-     title();
-     cnv.mouseClicked(titleMouseClicked);
-     break;
+     case 'play':
+        showQuestion();
+        break;
 
-   case 'shuffle':
-     shuffle();
-     // cnv.mouseClicked(shuffleMouseClicked);
-     break;
-  //
-  //  default:
-  //    break;
-  // }
-  //
-  //   //background with multiple cool colors
-  //   drawPixels();
-  }
-
-// //call back function for randomizer after button pressed
-// function buttonPressed() {
-//
-//   //beginning scene
-//   if (firstTime) {
-//
-//   //others
-//     firstTime = false;
-//   }
-
-//   animating = true;
-//   setTimeout(randomizer, 1000);
-// }
+    default:
+        break;
+   }
+}
 
 function drawPixels() {
   //draw background with light blue and cyan pixels to resemble ice
@@ -85,6 +67,12 @@ function drawPixels() {
 }
 
 function title() {
+  if (questions.length ==0) {
+    for (let i=0; i<question_library.length; i++) {
+    // for (let i=0; i<=10; i++) {
+       questions.push(question_library[i]);
+    }
+  }
   drawPixels();
   fill(0, 40, 180); //dark blue text to put over lighter blue background
   // drawIceCubes();
@@ -95,47 +83,26 @@ function title() {
   text("Click screen to begin", width*0.5, height*0.8);
 }
 
-// function titleMouseClicked(){
-//   state = shuffle;
-// }
-
-// function drawIceCubes(){
-//
-// }
-
-function shuffle() {
-  // animating = false;
-  // for shuffling questions
-  if (animating!) {
-    clear();
-
-    function drawPixels();
-
-    // random visible colors for the display text
-    fill(0, 40, 180); //dark blue text to put over lighter blue background
-    noStroke();
-
-    textAlign(CENTER);
-    textSize(24);
-
-    // question = random(questions);
-    // text(`${question}`, width * 0.5, height * 0.5);
-     text(questions[index], width * 0.5, height * 0.5);
-    // questions.splice(randomIndex, 1);
-    } else {
-    animating();
-    // end scene
-    state = title;
-  }
+function showQuestion(){
+  drawPixels();
+  textAlign(CENTER);
+  textSize(36);
+  console.log(`question: index=${index}, length = ${questions.length}`);
+  text(questions[index], width * 0.5, height * 0.5);
 }
 
-// function shuffleMouseClicked(){
-//   state = title;
-// }
-
 function mousePressed(){
-  index += 1;
-  if (index == questions.length) {
-    index = 0;
+  console.log(`b4: index=${index}, length = ${questions.length}`);
+  if (index>=0){
+    questions.splice(index, 1);
   }
+  if (questions.length == 0){
+    state = 'title';
+    index=-1;
+    console.log(`question_library=${question_library}`);
+    return;
+  }
+  state = 'play';
+  index = randomIndex = int(random(questions.length));
+  console.log(`after: index=${index}, length = ${questions.length}`);
 }
