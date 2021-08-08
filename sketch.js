@@ -67,9 +67,9 @@ function drawPixels() {
 }
 
 function title() {
-  if (questions.length ==0) {
+  if (questions.length == 0) {
     for (let i=0; i<question_library.length; i++) {
-    // for (let i=0; i<=10; i++) {
+    // for (let i=0; i<=9; i++) { //display 10 questions per round
        questions.push(question_library[i]);
     }
   }
@@ -98,7 +98,7 @@ function mousePressed(){
   }
   if (questions.length == 0){
     state = 'title';
-    index=-1;
+    // index=-1;
     console.log(`question_library=${question_library}`);
     return;
   }
