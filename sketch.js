@@ -35,10 +35,15 @@ let angle = 0; //let cube rotate
 
 let g;
 
+let nextButton; //button to display next question
+
 function setup() {
-  createCanvas(windowWidth, 600);
+  cnv=createCanvas(windowWidth, 450);
+  cnv.parent("#canvasDiv");
   g = createGraphics(windowWidth, 600, WEBGL);
   pixelDensity(1);
+  nextButton = select("#nextQuestion");
+  nextButton.mousePressed(buttonPressed);
 }
 
 function draw() {
@@ -78,34 +83,14 @@ function title() {
     }
   }
 
-  // push();
-  // drawIceCube();
-  // pop();
-
-  // push();
   drawPixels();
-  // pop();
-
   fill(0, 40, 180); //dark blue text to put over lighter blue background
   textAlign(CENTER);
-  textSize(96);
+  textSize(60);
   text("Ice Breaker", width*0.5, height*0.5);
   textSize(24);
-  text("Click to begin new round", width*0.5, height*0.8);
+  text("Click button to begin new round", width*0.5, height*0.75);
 }
-
-// function drawIceCube() {
-//   stroke(100, 240, 255);
-//   fill(255); //white
-//   translate(0, random(-height*0.5, height*0.5)); //let ice cube bounce vertically
-//   angleMode(DEGREES);
-//   rotateX(angle);
-//   rotateY(angle * 0.5);
-//   rotateZ(angle * 1.5);
-//   rectMode(CENTER);
-//   box(100);
-//   angle += 0.1;
-// }
 
 function showQuestion(){
   drawPixels();
@@ -116,7 +101,7 @@ function showQuestion(){
   text(questions[index], width * 0.5, height * 0.5);
 }
 
-function mousePressed(){
+function buttonPressed(){
   console.log(`b4: index=${index}, length = ${questions.length}`);
   if (index >= 0){
     questions.splice(index, 1);
