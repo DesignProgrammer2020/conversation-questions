@@ -29,10 +29,15 @@ let question_library = ["What is your favorite drink?",
 let index = -1;
 let state = 'title';
 let questions = [];
+let numQuestions = 0;
+
+let angle = 0; //let cube rotate
+
+let g;
 
 function setup() {
-  // background(0, 140, 255);
   createCanvas(windowWidth, 600);
+  g = createGraphics(windowWidth, 600, WEBGL);
   pixelDensity(1);
 }
 
@@ -69,40 +74,66 @@ function drawPixels() {
 function title() {
   if (questions.length == 0) {
     for (let i=0; i<question_library.length; i++) {
-    // for (let i=0; i<=9; i++) { //display 10 questions per round
        questions.push(question_library[i]);
     }
   }
+
+  // push();
+  // drawIceCube();
+  // pop();
+
+  // push();
   drawPixels();
+  // pop();
+
   fill(0, 40, 180); //dark blue text to put over lighter blue background
-  // drawIceCubes();
   textAlign(CENTER);
   textSize(96);
   text("Ice Breaker", width*0.5, height*0.5);
   textSize(24);
-  text("Click screen to begin", width*0.5, height*0.8);
+  text("Click to begin new round", width*0.5, height*0.8);
 }
+
+// function drawIceCube() {
+//   stroke(100, 240, 255);
+//   fill(255); //white
+//   translate(0, random(-height*0.5, height*0.5)); //let ice cube bounce vertically
+//   angleMode(DEGREES);
+//   rotateX(angle);
+//   rotateY(angle * 0.5);
+//   rotateZ(angle * 1.5);
+//   rectMode(CENTER);
+//   box(100);
+//   angle += 0.1;
+// }
 
 function showQuestion(){
   drawPixels();
   textAlign(CENTER);
   textSize(36);
   console.log(`question: index=${index}, length = ${questions.length}`);
+  // text(questions[index], width * 0.5, height * 0.5);
   text(questions[index], width * 0.5, height * 0.5);
 }
 
 function mousePressed(){
   console.log(`b4: index=${index}, length = ${questions.length}`);
-  if (index>=0){
+  if (index >= 0){
     questions.splice(index, 1);
   }
-  if (questions.length == 0){
-    state = 'title';
-    // index=-1;
+  if (numQuestions >= 10){
+    initTitle();
     console.log(`question_library=${question_library}`);
     return;
   }
   state = 'play';
   index = randomIndex = int(random(questions.length));
+  numQuestions += 1;
   console.log(`after: index=${index}, length = ${questions.length}`);
+}
+
+function initTitle(){
+  state = 'title';
+  index = -1;
+  numQuestions = 0;
 }
