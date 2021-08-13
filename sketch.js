@@ -92,7 +92,6 @@ function showQuestion(){
   textAlign(CENTER);
   textSize(36);
   console.log(`question: index=${index}, length = ${questions.length}`);
-  // text(questions[index], width * 0.5, height * 0.5);
   text(questions[index], width * 0.5, height * 0.5);
 }
 
