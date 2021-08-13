@@ -31,8 +31,6 @@ let state = 'title';
 let questions = [];
 let numQuestions = 0;
 
-let angle = 0; //let cube rotate
-
 let nextButton; //button to display next question
 
 function setup() {
